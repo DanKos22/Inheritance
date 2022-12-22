@@ -5,16 +5,14 @@ public class PreferredCustomer extends Customer{
     //Fields
     private int amount;
     private double discount;
-    private double purchase;
 
     // Default Constructor
     public PreferredCustomer() {
     }
 
-    public PreferredCustomer(int amount, double discount, double purchase) {
+    public PreferredCustomer(int amount, double discount) {
         this.amount = amount;
         this.discount = discount;
-        this.purchase = purchase;
     }
 
     public int getAmount() {
@@ -33,11 +31,4 @@ public class PreferredCustomer extends Customer{
         this.discount = discount;
     }
 
-    public double getPurchase() {
-        return purchase;
-    }
-
-    public void setPurchase(double purchase) {
-        this.purchase = purchase;
-    }
 }
