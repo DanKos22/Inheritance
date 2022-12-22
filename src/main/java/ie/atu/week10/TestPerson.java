@@ -24,13 +24,31 @@ public class TestPerson {
 
         // Instance of PreferredCustomer class
         PreferredCustomer person3 = new PreferredCustomer();
-        int amount = 2000;
+        int amount = 1000;
         person3.setAmount(amount);
-        double discount = 0.1;
-        person3.setDiscount(discount);
-        double purchase = amount - (amount * discount);
-        person3.setPurchase(purchase);
-        System.out.println("\nTotal cost after discount is " + person3.getPurchase());
+        double discount;
+        if(amount >= 500 && amount < 1000)
+        {
+            discount = 5;
+            person3.setDiscount(discount);
+        }
+        else if(amount >= 1000 && amount < 1500)
+        {
+            discount = 6;
+            person3.setDiscount(discount);
+        }
+        else if(amount >= 1500 && amount < 2000)
+        {
+            discount = 7;
+            person3.setDiscount(discount);
+        }
+        else
+        {
+            discount = 10;
+            person3.setDiscount(discount);
+        }
+        System.out.println("\nThe purchase is " + person3.getAmount());
+        System.out.println("\nThe discount is " + person3.getDiscount() + "%");
 
     }
 }
