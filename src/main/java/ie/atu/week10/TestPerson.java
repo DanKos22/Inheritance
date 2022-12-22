@@ -22,5 +22,15 @@ public class TestPerson {
 
         System.out.println("\nHere are the details for the customer: name: " + person_1.getName() + ",\t address:\t"  + person_1.getAddress() + ",\t phone number:\t" + person_1.getNumber() + ",\t customer number:\t" + person_1.getCustomerNumber() + ",\t is on mailing list:\t" + person_1.isMailingList());
 
+        // Instance of PreferredCustomer class
+        PreferredCustomer person3 = new PreferredCustomer();
+        int amount = 2000;
+        person3.setAmount(amount);
+        double discount = 0.1;
+        person3.setDiscount(discount);
+        double purchase = amount - (amount * discount);
+        person3.setPurchase(purchase);
+        System.out.println("\nTotal cost after discount is " + person3.getPurchase());
+
     }
 }
